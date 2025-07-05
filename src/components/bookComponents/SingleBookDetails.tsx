@@ -1,6 +1,5 @@
 import { useParams } from "react-router";
 import { useGetBookByIdQuery } from "../redux/api/baseApi";
-// import { BookOpen, XCircle } from "lucide-react";
 import { BorrowModal } from "../borrowComponents/borrowModal";
 
 const SingleBookDetails = () => {
@@ -59,27 +58,6 @@ const SingleBookDetails = () => {
             </div>
           </div>
 
-          {/* Action */}
-          {/* <button
-            disabled={!book.data.available}
-            className={`px-4 py-2 rounded-lg  transition ${
-              book.data.available
-                ? "bg-blue-200 hover:bg-blue-300"
-                : "bg-gray-400 cursor-not-allowed"
-            }`}
-          >
-            {book.data.available ? (
-              <span className="flex items-center gap-1 justify-center font-bold text-blue-800 ">
-                <BookOpen size={16} />
-                Borrow Book
-              </span>
-            ) : (
-              <span className="flex items-center gap-1 text-gray-700 justify-center font-bold">
-                <XCircle size={16} />
-                Not Available
-              </span>
-            )}
-          </button> */}
           <div className="flex items-center">
             <BorrowModal
               bookId={book._id!}
