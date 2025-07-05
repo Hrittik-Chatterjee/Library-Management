@@ -18,9 +18,11 @@ import {
 } from "../ui/select";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router";
 
 const AddBook = () => {
   const [addBook, { isLoading }] = useAddBookMutation();
+  const navigate = useNavigate();
 
   const form = useForm({
     defaultValues: {
@@ -46,6 +48,8 @@ const AddBook = () => {
         autoClose: 1000,
       });
       form.reset();
+
+      navigate("/books");
     } catch (error) {
       toast.error("Failed to add book", {
         position: "top-center",
@@ -65,7 +69,6 @@ const AddBook = () => {
           Add a New Book
         </h1>
 
-        {/* Title */}
         <FormField
           control={form.control}
           name="title"
@@ -79,7 +82,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* Author */}
         <FormField
           control={form.control}
           name="author"
@@ -93,7 +95,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* Picture URL */}
         <FormField
           control={form.control}
           name="picture"
@@ -107,7 +108,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* Genre Select */}
         <FormField
           control={form.control}
           name="genre"
@@ -139,7 +139,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* ISBN */}
         <FormField
           control={form.control}
           name="isbn"
@@ -153,7 +152,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* Description */}
         <FormField
           control={form.control}
           name="description"
@@ -171,7 +169,6 @@ const AddBook = () => {
           )}
         />
 
-        {/* Copies */}
         <FormField
           control={form.control}
           name="copies"

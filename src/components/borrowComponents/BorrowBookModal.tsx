@@ -50,6 +50,7 @@ export function BorrowBookModal({
   author: string;
 }) {
   const [open, setOpen] = useState(false);
+  console.log(title);
 
   const [borrowBook, { isLoading }] = useBorrowBookMutation();
 

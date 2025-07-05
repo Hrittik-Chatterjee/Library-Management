@@ -13,7 +13,6 @@ const SingleBookDetails = () => {
   return (
     <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden mt-10 p-6">
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Book Image */}
         <div className="flex-shrink-0">
           <img
             src={book.data.picture}
@@ -22,7 +21,6 @@ const SingleBookDetails = () => {
           />
         </div>
 
-        {/* Book Info */}
         <div className="flex flex-col justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -60,12 +58,12 @@ const SingleBookDetails = () => {
 
           <div className="flex items-center">
             <BorrowBookModal
-              bookId={book._id!}
-              picture={book.picture}
-              copies={book.copies}
-              title={book.title}
-              author={book.author}
-              isbn={book.isbn}
+              bookId={book.data._id!}
+              picture={book.data.picture}
+              copies={book.data.copies}
+              title={book.data.title}
+              author={book.data.author}
+              isbn={book.data.isbn}
             />
           </div>
         </div>
