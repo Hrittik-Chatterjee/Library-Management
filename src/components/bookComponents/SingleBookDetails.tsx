@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useGetBookByIdQuery } from "../redux/api/baseApi";
-import { BorrowModal } from "../borrowComponents/borrowModal";
+import { BorrowBookModal } from "../borrowComponents/BorrowBookModal";
 
 const SingleBookDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -59,7 +59,7 @@ const SingleBookDetails = () => {
           </div>
 
           <div className="flex items-center">
-            <BorrowModal
+            <BorrowBookModal
               bookId={book._id!}
               picture={book.picture}
               copies={book.copies}

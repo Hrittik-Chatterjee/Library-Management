@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { useDeleteBookMutation } from "@/components/redux/api/baseApi";
 import { UpdateModal } from "./UpdateModal";
 import { toast } from "react-toastify";
-import { BorrowModal } from "../borrowComponents/borrowModal";
+import { BorrowBookModal } from "../borrowComponents/BorrowBookModal";
 
 const BookCard = ({ book }: { book: IBooks }) => {
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ const BookCard = ({ book }: { book: IBooks }) => {
             <Eye size={12} /> Details
           </button>
 
-          <BorrowModal
+          <BorrowBookModal
             bookId={book._id!}
             picture={book.picture}
             copies={book.copies}

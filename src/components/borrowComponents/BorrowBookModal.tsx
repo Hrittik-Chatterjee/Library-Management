@@ -34,7 +34,7 @@ import { cn } from "@/lib/utils";
 import type { IBorrow } from "@/types";
 import { Calendar } from "../ui/calendar";
 
-export function BorrowModal({
+export function BorrowBookModal({
   bookId,
   picture,
   copies,
