@@ -16,7 +16,7 @@ export default function Footer() {
           <Link to="/borrow-summery" className="text-sm hover:text-[#456882]">
             Borrow Summary
           </Link>
-          <Link to="/addbook" className="text-sm hover:text-[#456882]">
+          <Link to="/create-book" className="text-sm hover:text-[#456882]">
             Add Book
           </Link>
 

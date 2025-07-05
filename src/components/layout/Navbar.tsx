@@ -24,7 +24,7 @@ export default function Navbar() {
             Borrow Summery
           </Link>
           <Link
-            to="/addbook"
+            to="/create-book"
             className="text-sm md:text-base font-bold hover:text-[#456882] transition-colors"
           >
             Add Book

@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <BorrowSummery />,
       },
       {
-        path: "addbook",
+        path: "create-book",
         element: <AddBook />,
       },
     ],
